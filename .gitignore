@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+*.zip
+
+# Data files are never committed: download them where the assignment says.
+data/*
+!data/.gitkeep
+
+# The module files you download from Canvas are course material: keep them here, never commit them.
+docs/modules/*
+!docs/modules/.gitkeep
