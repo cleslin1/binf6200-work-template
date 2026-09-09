@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+*.zip
+
+# Data files are never committed: download them where the assignment says.
+data/*
+!data/.gitkeep

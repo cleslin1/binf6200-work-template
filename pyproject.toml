@@ -1,0 +1,31 @@
+# Rendered from pyproject.toml.tmpl by scripts/render_course.py in the course workspace.
+# Students: this file is yours. Add packages with `uv add <name>`; leave the pinned
+# tool versions alone so your lint and test results match the grader's.
+[project]
+name = "binf6200-work"
+version = "0.1.0"
+description = "BINF6200 homework repo (cloned from the course template in W1)"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest==9.1.1",
+    "pytest-cov==7.1.0",
+    "pylint==4.0.7",
+    "flake8==7.3.0",
+    "ruff==0.16.4",
+]
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Homework programs live at the repo root and their tests in tests/. Without this line a test
+# cannot import the program it tests: "ModuleNotFoundError: No module named ...".
+pythonpath = ["."]
+
+[tool.coverage.run]
+branch = true
+omit = ["tests/*"]
